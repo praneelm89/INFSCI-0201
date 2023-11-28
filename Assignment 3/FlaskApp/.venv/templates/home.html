@@ -1,0 +1,27 @@
+<!-- templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Information</title>
+</head>
+<body>
+    <h1>Home Information</h1>
+    <p><strong>Address:</strong> {{ home.address }}</p>
+    
+    <h2>Smart Devices:</h2>
+    <ul>
+        {% for device in home.smart_devices %}
+            <li>
+                <strong>Name:</strong> {{ device.name }}, 
+                <strong>Manufacturer:</strong> {{ device.manufacturer }},
+                {% if device.brightness is defined %} <!-- Check if the device has brightness attribute -->
+                    <strong>Brightness:</strong> {{ device.brightness }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
