@@ -1,7 +1,6 @@
 **Project Report**
 
-**Github Repo**
-
+[**Github Repo**](https://github.com/praneelm89/INFSCI-0201/tree/main/Final%20Project)
 
 **Abstract:**
 This project implements a SmartHome API using Flask, providing users with the ability to manage various smart home devices such as thermostats, light bulbs, smart vacuums, and smart fridges. The API supports CRUD (Create, Read, Update, & Delte) operations, data persistence, and integrates with a public weather API for enhanced functionality with the Smart Refrigerators. Users can interact with the API to add/remove devices, retrieve device information, and inquire about the temperature difference between the home and outside.
@@ -60,4 +59,4 @@ The project uses JSON for data persistence. Device information is serialized to 
 
 
 **Public API**
-I used the Weather API (https://www.weatherapi.com/), a free API to retrieve the current weather based on provided location to display on the Smart Refrigerator Screens.
+I used the [Weather API](https://www.weatherapi.com/), a free API to retrieve the current weather based on provided location to display on the Smart Refrigerator Screens.
