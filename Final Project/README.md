@@ -1,9 +1,9 @@
-# Project Report
+# Project Report - [**Github Repository**](https://github.com/praneelm89/INFSCI-0201/tree/main/Final%20Project)
 
-[**Github Repository**](https://github.com/praneelm89/INFSCI-0201/tree/main/Final%20Project)
+### Praneel Murthy
 
 ## Abstract:
-This project implements a SmartHome API using Flask, providing users with the ability to manage various smart home devices such as thermostats, light bulbs, smart vacuums, and smart fridges. The API supports CRUD (Create, Read, Update, & Delte) operations, data persistence, and integrates with a public weather API for enhanced functionality with the Smart Refrigerators. Users can interact with the API to add/remove devices, retrieve device information, and inquire about the temperature difference between the home and outside.
+This project implements a SmartHome API using Flask, providing users with the ability to manage various smart home devices such as thermostats, light bulbs, smart vacuums, and smart fridges. The API supports CRUD operations, data persistence, and integrates with a public weather API for enhanced functionality with the Smart Refrigerators. Users can interact with the API to add/remove devices, retrieve device information, and inquire about the temperature difference between the home and outside.
 
 ## API Features:
 
