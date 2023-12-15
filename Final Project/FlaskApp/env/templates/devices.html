@@ -1,0 +1,42 @@
+<!-- templates/devices.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devices Information</title>
+</head>
+<body>
+     
+    <h1>Smart Devices:</h1>
+
+        {% for device in home.smart_devices %}
+        <ul>
+            <strong>Device Type:</strong> {{device.device_type}}
+            <ul>
+                <li><strong>ID:</strong> {{ device.device_id }}</li> 
+                <li><strong>Manufacturer:</strong> {{ device.manufacturer }}</li>
+
+                {% if device.device_type == "LightBulb" %} <!-- Check if the device is LightBulb -->
+                    <li><strong>Brightness:</strong> {{ device.brightness }}</li>
+                {% endif %}
+                {% if device.device_type == "Thermostat" %} <!-- Check if the device is Thermostat -->
+                    <li><strong>Inside Temperature:</strong> {{ device.temperature }}</li>
+                {% endif %}
+                {% if device.device_type == "Smart Vacuum" %} <!-- Check if the device is Smart Vacuum -->
+                    <li>{{ device.binStatusMessage }}</li>
+                {% endif %}
+                {% if device.device_type == "Smart Refrigerator" %} <!-- Check if the device is Smart Fridge -->
+                    <li><strong>Local Outside Temperature:</strong> {{ device.localTemperature }}</li>
+                {% endif %}
+                {% if device.device_type == "GarageDoor" %} <!-- Check if the device is garagedoor -->
+                    <li>{{ device.garageDoorMessage }}</li>
+                {% endif %}
+            </ul>            
+        </ul>
+        {% endfor %}
+
+        <a href="http://127.0.0.1:8000/">Return Home</a>
+</body>
+</html>

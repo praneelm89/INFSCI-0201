@@ -1,0 +1,28 @@
+<!-- templates/vacuums.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Vacuum Information</title>
+</head>
+<body>
+       
+    <h1>Smart Vacuums:</h1>
+    <ul>
+        {% for device in home.smart_devices %}
+            {% if device.device_type == "Smart Vacuum" %} <!-- Check if the device is Smart Vacuum -->
+                <li>
+                    <strong>Device-ID:</strong> {{ device.device_id }}, 
+                    <strong>Location:</strong> {{device.location}},
+                    <strong>Manufacturer:</strong> {{ device.manufacturer }},
+                    <strong>Bin Status:</strong> {{ device.binStatusMessage }}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <a href="http://127.0.0.1:8000/">Return Home</a>
+</body>
+</html>
